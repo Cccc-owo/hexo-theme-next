@@ -4,7 +4,6 @@ on:
   workflow_dispatch:
   schedule:
     - cron: 0 8 * * fri
-    # cron表达式,每周五16点执行一次，actions任务时区为UTC时区。 
 
 
 jobs:
@@ -12,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v2.3.4
       with:
         ref: master
         fetch-depth: 0
